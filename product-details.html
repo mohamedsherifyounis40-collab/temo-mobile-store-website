@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">تفاصيل المنتج | Temo Mobile Store</title>
+  <meta name="description" content="تفاصيل المنتج والسعر والمواصفات في Temo Mobile Store، مع إمكانية الطلب مباشرة عبر واتساب.">
+  <meta property="og:type" content="product">
+  <meta property="og:locale" content="ar_EG">
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================== Header ===================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">📱</span>
+        <span>Temo Mobile Store</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">الرئيسية</a>
+        <a href="products.html" class="active">المنتجات</a>
+        <a href="about.html">من نحن</a>
+        <a href="contact.html">تواصل معنا</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="products.html" class="icon-btn" title="بحث" aria-label="بحث عن منتج">🔍</a>
+        <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== Breadcrumb ===================== -->
+  <div class="breadcrumb-bar">
+    <div class="container breadcrumb">
+      <a href="index.html">الرئيسية</a>
+      <span>/</span>
+      <a href="products.html">المنتجات</a>
+      <span>/</span>
+      <span class="current" id="breadcrumbCurrent">تفاصيل المنتج</span>
+    </div>
+  </div>
+
+  <!-- ===================== Product Details ===================== -->
+  <section class="section" id="productDetailsSection">
+    <div class="container">
+      <div class="product-details-layout" id="productDetailsLayout">
+        <!-- يُملأ ديناميكيًا عبر js/product-details.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Related Products ===================== -->
+  <section class="section related-section" id="relatedSection" style="display:none">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">قد يعجبك أيضًا</span>
+        <h2 class="section-title">منتجات ذات صلة</h2>
+      </div>
+      <div class="products-grid" id="relatedGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <span>📱</span>
+            <span>Temo Mobile Store</span>
+          </div>
+          <p>وجهتك الأولى لأحدث الموبايلات والإكسسوارات بأفضل الأسعار وضمان حقيقي.</p>
+          <div class="footer-social">
+            <a href="#" title="فيسبوك">📘</a>
+            <a href="#" title="إنستجرام">📷</a>
+            <a href="https://wa.me/201000000000" title="واتساب">💬</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="products.html">المنتجات</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>الأقسام</h4>
+          <ul>
+            <li><a href="products.html?category=iphone">iPhone</a></li>
+            <li><a href="products.html?category=samsung">Samsung</a></li>
+            <li><a href="products.html?category=xiaomi">Xiaomi</a></li>
+            <li><a href="products.html?category=accessories">إكسسوارات</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>تواصل معنا</h4>
+          <ul class="footer-contact">
+            <li>📍 العنوان — يُحدَّث لاحقًا</li>
+            <li>📞 01000000000</li>
+            <li>🕒 يوميًا: 10 ص - 11 م</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year"></span> Temo Mobile Store — جميع الحقوق محفوظة
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== Floating WhatsApp ===================== -->
+  <a href="https://wa.me/201000000000" target="_blank" rel="noopener" class="whatsapp-float" aria-label="تواصل عبر واتساب">💬</a>
+
+  <script src="js/main.js"></script>
+  <script src="js/product-details.js"></script>
+</body>
+</html>

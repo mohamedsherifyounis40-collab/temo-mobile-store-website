@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temo Mobile Store | متجر الموبايلات والإكسسوارات</title>
+  <meta name="description" content="Temo Mobile Store - أفضل أسعار الموبايلات والإكسسوارات: iPhone, Samsung, Xiaomi, Oppo, Realme وأكثر. تواصل معنا الآن عبر واتساب.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Temo Mobile Store | متجر الموبايلات والإكسسوارات">
+  <meta property="og:description" content="أفضل أسعار الموبايلات والإكسسوارات: iPhone, Samsung, Xiaomi, Oppo, Realme وأكثر.">
+  <meta property="og:locale" content="ar_EG">
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================== Header ===================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">📱</span>
+        <span>Temo Mobile Store</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">الرئيسية</a>
+        <a href="products.html">المنتجات</a>
+        <a href="about.html">من نحن</a>
+        <a href="contact.html">تواصل معنا</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="products.html" class="icon-btn" title="بحث" aria-label="بحث عن منتج">🔍</a>
+        <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== Hero ===================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">أسعار منافسة يوميًا</span>
+        <h1 class="hero-title">هاتفك الجديد <span>في Temo</span><br>بأفضل سعر وضمان حقيقي</h1>
+        <p class="hero-text">أحدث أجهزة iPhone وSamsung وXiaomi وOppo وRealme، بالإضافة لأفضل الإكسسوارات الأصلية. تصفح المنتجات واطلب مباشرة عبر واتساب.</p>
+        <div class="hero-actions">
+          <a href="products.html" class="btn btn-primary">تصفح المنتجات</a>
+          <a href="https://wa.me/201000000000" target="_blank" rel="noopener" class="btn btn-outline">تواصل واتساب</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-visual-box">📱</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Categories ===================== -->
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">تسوق حسب القسم</span>
+        <h2 class="section-title">أقسام المتجر</h2>
+        <p class="section-subtitle">اختر الشركة أو القسم اللي بتدور عليه</p>
+      </div>
+
+      <div class="categories-grid">
+        <a href="products.html?category=iphone" class="category-card">
+          <div class="category-icon">📱</div>
+          <div class="category-name">iPhone</div>
+        </a>
+        <a href="products.html?category=samsung" class="category-card">
+          <div class="category-icon">📱</div>
+          <div class="category-name">Samsung</div>
+        </a>
+        <a href="products.html?category=xiaomi" class="category-card">
+          <div class="category-icon">📱</div>
+          <div class="category-name">Xiaomi</div>
+        </a>
+        <a href="products.html?category=oppo" class="category-card">
+          <div class="category-icon">📱</div>
+          <div class="category-name">Oppo</div>
+        </a>
+        <a href="products.html?category=realme" class="category-card">
+          <div class="category-icon">📱</div>
+          <div class="category-name">Realme</div>
+        </a>
+        <a href="products.html?category=accessories" class="category-card">
+          <div class="category-icon">🎧</div>
+          <div class="category-name">إكسسوارات</div>
+        </a>
+        <a href="products.html?category=other" class="category-card">
+          <div class="category-icon">🔌</div>
+          <div class="category-name">أخرى</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Featured Products ===================== -->
+  <section class="section" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">لا تفوّتها</span>
+        <h2 class="section-title">عروض ومنتجات مميزة</h2>
+        <p class="section-subtitle">أفضل الأسعار على تشكيلة مختارة من المنتجات</p>
+      </div>
+
+      <div class="products-grid" id="featuredGrid">
+        <!-- تُملأ تلقائيًا عبر js/main.js من data/products.json -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Why Choose Us ===================== -->
+  <section class="section" id="why-us">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ليه تختارنا</span>
+        <h2 class="section-title">ليه تشتري من Temo Mobile Store</h2>
+      </div>
+
+      <div class="why-us-grid">
+        <div class="why-us-card">
+          <div class="why-us-icon">✅</div>
+          <div class="why-us-title">ضمان حقيقي</div>
+          <div class="why-us-text">كل الأجهزة أصلية ومضمونة من المحل مباشرة.</div>
+        </div>
+        <div class="why-us-card">
+          <div class="why-us-icon">🚚</div>
+          <div class="why-us-title">توصيل سريع</div>
+          <div class="why-us-text">استلم طلبك في أسرع وقت لباب البيت.</div>
+        </div>
+        <div class="why-us-card">
+          <div class="why-us-icon">💬</div>
+          <div class="why-us-title">دعم فني ومتابعة</div>
+          <div class="why-us-text">فريقنا جاهز يساعدك في الاختيار والدعم بعد الشراء.</div>
+        </div>
+        <div class="why-us-card">
+          <div class="why-us-icon">💰</div>
+          <div class="why-us-title">أفضل الأسعار</div>
+          <div class="why-us-text">أسعار منافسة يوميًا وعروض مستمرة على أحدث الموديلات.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA Banner ===================== -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>عايز تطلب أو عندك استفسار؟</h2>
+        <p>تواصل معانا دلوقتي على واتساب وهنرد عليك في أسرع وقت</p>
+        <a href="https://wa.me/201000000000" target="_blank" rel="noopener" class="btn btn-whatsapp">💬 تواصل عبر واتساب</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <span>📱</span>
+            <span>Temo Mobile Store</span>
+          </div>
+          <p>وجهتك الأولى لأحدث الموبايلات والإكسسوارات بأفضل الأسعار وضمان حقيقي.</p>
+          <div class="footer-social">
+            <a href="#" title="فيسبوك">📘</a>
+            <a href="#" title="إنستجرام">📷</a>
+            <a href="https://wa.me/201000000000" title="واتساب">💬</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="products.html">المنتجات</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>الأقسام</h4>
+          <ul>
+            <li><a href="products.html?category=iphone">iPhone</a></li>
+            <li><a href="products.html?category=samsung">Samsung</a></li>
+            <li><a href="products.html?category=xiaomi">Xiaomi</a></li>
+            <li><a href="products.html?category=accessories">إكسسوارات</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>تواصل معنا</h4>
+          <ul class="footer-contact">
+            <li>📍 العنوان — يُحدَّث لاحقًا</li>
+            <li>📞 01000000000</li>
+            <li>🕒 يوميًا: 10 ص - 11 م</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year"></span> Temo Mobile Store — جميع الحقوق محفوظة
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== Floating WhatsApp ===================== -->
+  <a href="https://wa.me/201000000000" target="_blank" rel="noopener" class="whatsapp-float" aria-label="تواصل عبر واتساب">💬</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
