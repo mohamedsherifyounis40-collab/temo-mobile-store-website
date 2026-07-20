@@ -15,8 +15,60 @@ const CATEGORY_ICONS = {
 document.addEventListener('DOMContentLoaded', () => {
   setupMobileNav();
   setupFooterYear();
+  setupPageTransitions();
   loadFeaturedProducts();
+  observeReveal(document);
 });
+
+// ---------- Scroll reveal (fade-in + slide-up) ----------
+let _revealObserver = null;
+
+function getRevealObserver() {
+  if (_revealObserver || !('IntersectionObserver' in window)) return _revealObserver;
+  _revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        _revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  return _revealObserver;
+}
+
+function observeReveal(root) {
+  const items = (root || document).querySelectorAll('.reveal:not(.is-visible)');
+  const observer = getRevealObserver();
+  if (!observer) {
+    items.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+  items.forEach(el => observer.observe(el));
+}
+
+// ---------- Lightweight page transition ----------
+function setupPageTransitions() {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.addEventListener('click', (e) => {
+    if (reduceMotion) return;
+
+    const link = e.target.closest('a[href]');
+    if (!link || link.target === '_blank' || link.hasAttribute('download')) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+
+    e.preventDefault();
+    document.body.classList.add('page-fade-out');
+    setTimeout(() => { window.location.href = href; }, 200);
+  });
+
+  window.addEventListener('pageshow', () => {
+    document.body.classList.remove('page-fade-out');
+  });
+}
 
 function setupMobileNav() {
   const toggle = document.getElementById('navToggle');
@@ -44,6 +96,7 @@ async function loadFeaturedProducts() {
     const featured = products.filter(p => p.featured);
     const toShow = featured.length > 0 ? featured : products.slice(0, 8);
     grid.innerHTML = toShow.map(buildProductCard).join('');
+    observeReveal(grid);
   } catch (err) {
     grid.innerHTML = '<p>تعذّر تحميل المنتجات حاليًا.</p>';
   }
@@ -68,7 +121,7 @@ function buildProductCard(product) {
     : icon;
 
   return `
-    <div class="product-card">
+    <div class="product-card reveal">
       ${discountBadge}${newBadge}
       <div class="product-thumb">${thumbContent}</div>
       <div class="product-body">

@@ -100,4 +100,5 @@ function render() {
   countEl.textContent = `${filtered.length} منتج`;
   emptyState.style.display = filtered.length === 0 ? 'block' : 'none';
   grid.innerHTML = filtered.map(buildProductCard).join('');
+  observeReveal(grid);
 }

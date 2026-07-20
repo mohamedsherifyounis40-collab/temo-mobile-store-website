@@ -107,5 +107,7 @@ function renderRelated(product, allProducts) {
   if (related.length === 0) return;
 
   document.getElementById('relatedSection').style.display = 'block';
-  document.getElementById('relatedGrid').innerHTML = related.map(buildProductCard).join('');
+  const relatedGrid = document.getElementById('relatedGrid');
+  relatedGrid.innerHTML = related.map(buildProductCard).join('');
+  observeReveal(relatedGrid);
 }
